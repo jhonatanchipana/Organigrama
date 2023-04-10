@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Listado de Empleados";
+}
+
+<h1>Listado de Empleados</h1>
+
+<div class="mb-2">
+    <a class="btn btn-primary" asp-action="Create">Registrar</a>
+</div>
+
+<div>
+    <table class="table" id="table-employee">
+        <thead>
+            <tr>
+                <th data-formatter="rowNumFormatter">#</th>
+                <th data-field="names">Nombres</th>
+                <th data-field="lastNames">Apellidos</th>
+                <th data-field="nroDocument">DNI</th>
+                <th data-field="workStation.name">Puesto</th>
+                <th data-formatter="formatterBirthDate" data-field="birthDate">Fecha de Nacimiento</th>
+                <th data-field="email">Correo Electrónico</th>
+                <th data-field="phone">Celular</th>
+            </tr>
+        </thead>
+    </table>    
+</div>
+
+@section Scripts{
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        const UrlBase = '@Url.Action("GetList")';
+        let $tableMain = $('#table-employee');
+    </script>
+
+    <script src="~/js/employee/index.js"></script>
+}

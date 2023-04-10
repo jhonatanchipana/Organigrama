@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Organigrama";
+}
+
+@section Styles{
+    <link href="~/css/organizationchart/index.css" rel="stylesheet" />
+}
+
+<div>
+    <h1 class="text-center">Organigrama</h1>
+    <div id="organigrama-chart" class="chart-container"></div>
+</div>
+
+@section Scripts{
+
+    <script>
+        const UrlBase = '@Url.Action("GetOrganigrama")';
+    </script>
+
+    <script src="~/js/organizationchart/index.js"></script>
+}

@@ -1,0 +1,108 @@
+﻿.chart-container {
+    float: left;
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.orgchart {
+    background: #fff;
+    border: 0;
+}
+
+.org-chart > .spinner {
+    color: rgba(255, 255, 0, 0.75);
+}
+
+.orgchart .node .title {
+    background-color: #fff;
+    color: #000;
+    height: 80px;
+    border-radius: 0;
+}
+
+.orgchart.r2l .node .title {
+    transform: rotate(-90deg) translate(60px, 60px);
+    -ms-transform: rotate(-90deg) translate(60px, 60px);
+    -moz-transform: rotate(-90deg) translate(60px, 60px);
+    -webkit-transform: rotate(-90deg) translate(60px, 60px);
+}
+
+.orgchart.l2r .node .title {
+    transform: rotate(-90deg) translate(60px, 60px) rotateY(180deg);
+    -ms-transform: rotate(-90deg) translate(60px, 60px) rotateY(180deg);
+    -moz-transform: rotate(-90deg) translate(60px, 60px) rotateY(180deg);
+    -webkit-transform: rotate(-90deg) translate(60px, 60px) rotateY(180deg);
+}
+
+.orgchart .node .content {
+    border: 0;
+    background-color: #b80036;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.6em;
+    white-space: normal;
+    height: auto;
+    padding: 5px !important;
+    border-radius: 4px !important;
+}
+
+.orgchart.r2l .node .content,
+.orgchart.l2r .node .content {
+    position: absolute;
+    bottom: 138px;
+    right: 78px;
+    width: 20px;
+    border-radius: 0px;
+}
+
+.orgchart .node > .spinner {
+    color: rgba(184, 0, 54, 0.75);
+}
+
+.orgchart.r2l .node,
+.orgchart.l2r .node {
+    width: 130px;
+}
+
+.orgchart .node:hover {
+    background-color: rgba(255, 255, 0, 0.6);
+}
+
+.orgchart .node.focused {
+    background-color: rgba(255, 255, 0, 0.6);
+}
+
+.orgchart .node .edge {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.orgchart .edge:hover {
+    color: #000;
+}
+
+.orgchart td.left,
+.orgchart td.top,
+.orgchart td.right {
+    border-color: #999;
+}
+
+.orgchart td > .down {
+    background-color: #999;
+}
+
+.node .content {
+    min-height: 20px !important;
+    padding: 0 !important;
+}
+
+.edge.verticalEdge.topEdge.oci, .edge.horizontalEdge.rightEdge.oci, .edge.horizontalEdge.leftEdge.oci {
+    display: none;
+}
+
+.orgchart .node {
+    width: 140px;
+}

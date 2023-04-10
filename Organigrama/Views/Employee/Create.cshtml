@@ -1,0 +1,86 @@
+﻿@using Organigrama.Entities.Enums;
+@model EmployeeCreateViewModel
+
+@{
+    ViewData["Title"] = "Registrar Empleado";   
+
+    var selectListItemPuesto = new SelectListItem()
+    {
+        Value = "",
+        Text = "Seleccione un Puesto"
+    };
+    var workStations = Model.WorkStations.Prepend(selectListItemPuesto);
+
+}
+
+<h1>Registrar Empleado</h1>
+
+<span asp-validation-summary="ModelOnly" class="text-color"></span>
+
+<form asp-action="Create">
+    <div class="mb-3">
+        <label asp-for="Names" class="form-label"></label>
+        <input class="form-control" asp-for="Names" />
+        <span asp-validation-for="Names" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastNames" class="form-label"></label>
+        <input class="form-control" asp-for="LastNames" />
+        <span asp-validation-for="LastNames" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NroDocument" class="form-label"></label>
+        <input class="form-control" asp-for="NroDocument" />
+        <span asp-validation-for="NroDocument" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="BirthDate" class="form-label"></label>
+        <input class="form-control" asp-for="BirthDate"/>
+        <span asp-validation-for="BirthDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input class="form-control" asp-for="Phone" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="WorkStationId" class="form-label"></label>
+        <select class="form-control" asp-for="WorkStationId" asp-items="workStations"></select>
+        <span asp-validation-for="WorkStationId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="BossId" class="form-label"></label>
+        <input type="hidden" class="form-control" asp-for="BossId" />
+        <input type="text" class="form-control" id="boos-id-auto" name="boos-id-auto" />
+        <span asp-validation-for="BossId" class="text-danger"></span>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Registrar</button>
+    <a asp-action="Index" class="btn btn-secondary">Regresar</a>
+
+</form>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        const UrlBase = '@Url.Action("Autocomplete")';
+    </script>
+    
+    <script src="~/js/employee/create.js"></script>
+
+}
