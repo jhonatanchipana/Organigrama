@@ -42,7 +42,7 @@ namespace Organigrama.Models
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Date)]
         [Display(Name = "Fecha de Nacimiento")]
-        public DateTime BirthDate { get; set; } = DateTime.Parse(DateTime.Now.ToString("dd-MM-yyyy"));
+        public DateTime BirthDate { get; set; } = DateTime.Parse(DateTime.UtcNow.ToString("dd/MM/yyyy"));
 
         /// <summary>
         /// Celular del empleado
