@@ -36,7 +36,7 @@ Proporcionará una visión clara de los roles de cada empleado, así como las re
 1. Clona este repositorio: `git clone https://github.com/jhonatanchipana/Organigrama.git`
 2. Abre el proyecto en tu entorno de desarrollo preferido (por ejemplo, Visual Studio o Visual Studio Code).
 3. Configura la cadena de conexión a la base de datos en el archivo appsettings.json. Asegúrate de tener una instancia de base de datos compatible y actualizada.
-4. Ejecuta las migraciones de Entity Framework Core para crear la estructura de la base de datos `dotnet ef database update`.
+4. Ejecuta las migraciones de Entity Framework para crear la estructura de la base de datos `dotnet ef database update`.
 6. Ejecuta el proyecto: `dotnet run`
 7. Abre tu navegador web y visita `http://localhost:5043`
 
