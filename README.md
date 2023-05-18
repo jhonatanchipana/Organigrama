@@ -33,9 +33,9 @@ Proporcionará una visión clara de los roles de cada empleado, así como las re
 ## Instalación
 
 1. Clona este repositorio: `git clone https://github.com/jhonatanchipana/Organigrama.git`
-2. Ve al directorio del proyecto: `cd tu-proyecto`
+2. Ve al directorio del proyecto: `cd organigrama`
 3. Ejecuta el proyecto: `dotnet run`
-4. Abre tu navegador web y visita `http://localhost:5000`
+4. Abre tu navegador web y visita `http://localhost:5043`
 
 ## Licencia
 
