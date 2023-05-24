@@ -85,7 +85,7 @@ namespace Organigrama.Migrations
 
                     b.HasIndex("WorkStationId");
 
-                    b.ToTable("Employee");
+                    b.ToTable("Employee", (string)null);
                 });
 
             modelBuilder.Entity("Organigrama.Entities.WorkStation", b =>
@@ -128,7 +128,7 @@ namespace Organigrama.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WorkStation");
+                    b.ToTable("WorkStation", (string)null);
                 });
 
             modelBuilder.Entity("Organigrama.Entities.Employee", b =>

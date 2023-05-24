@@ -20,6 +20,7 @@ namespace Organigrama
             base.OnModelCreating(modelBuilder);
 
             #region Configuraciones Generales
+
             foreach (var item in modelBuilder.Model.GetEntityTypes())
             {
                 //configuraciones asociadas a la baseEntity
