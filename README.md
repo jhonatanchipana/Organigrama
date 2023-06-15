@@ -37,6 +37,7 @@ Proporcionará una visión clara de los roles de cada empleado, así como las re
 2. Abre el proyecto en tu entorno de desarrollo preferido (por ejemplo, Visual Studio o Visual Studio Code).
 3. Configura la cadena de conexión a la base de datos en el archivo appsettings.json. Asegúrate de tener una instancia de base de datos compatible y actualizada.
 4. Ejecuta las migraciones de Entity Framework para crear la estructura de la base de datos `dotnet ef database update`.
+5. Ejecuta en la base de datos el siguiente archivo `Insertar-Categorias.sql`.
 6. Ejecuta el proyecto: `dotnet run`
 7. Abre tu navegador web y visita `http://localhost:5043`
 
